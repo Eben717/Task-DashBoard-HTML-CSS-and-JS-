@@ -112,8 +112,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
-    gap: 3px;
+    flex-direction: column;  
 }
 
 .container .left header nav ul li{
@@ -139,4 +138,123 @@ body{
     border-bottom-left-radius: 10px;
     transition: .3s ease;
 }
+.container .left header nav ul li:first-child a,
+.container .left header nav ul li a:hover{
+    transition: 0s;
+    background: #f1f3ff;
+}
 
+.container .left header nav ul li a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #6577ff;
+    transition: 0.3 ease;
+}
+
+.container .left header nav ul li:first-child a::before,
+.container .left header nav ul li a:hover::before
+{
+    width: 4px;
+}
+
+.container .left header nav ul li a .material-symbols-outlined{
+    color: #999;
+    font-size: 1.7em;
+    margin-right: 10px;
+}
+
+.container .left header nav ul li a .title{
+    color: #999;
+    font-size: 1.1em;
+}
+
+.container .left header nav ul li a:hover .material-symbols-outlined
+.container .left header nav ul li a:hover .title{
+    color: #6577ff;
+}
+
+.container .left .upgrade{
+    position: relative;
+    width: calc(100% - 10px);
+    height: 180px;
+    background: linear-gradient(145deg, #d488e8, #8389f9);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container .left .upgrade h4 {
+    color:#fff ;
+    font-weight: 400;
+}
+
+
+.container .left .upgrade .upBtn{
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .left .upgrade .upBtn button{
+    width: 100%;
+    height: 30%;
+    background: #fff;
+    outline: none;
+    border: none;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.container .right{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.container .right .top{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.container .right .top .searchBx{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .right .top .searchBx h2{
+    color: #000;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.container .right .top .searchBx .inputBx{
+    position: relative;
+    width: 250px;
+    height: 40px;
+    background: #f8f2fe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    overflow: hidden;
+}
