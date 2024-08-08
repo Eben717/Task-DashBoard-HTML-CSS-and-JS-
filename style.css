@@ -287,3 +287,81 @@ body{
     overflow: hidden;
     cursor: pointer;
 }
+
+img{
+   position: relative;
+   width: 50px;
+   border-radius: 10px;
+}
+
+.container .right .top .user h2{
+    font-size: 1.1em;
+    line-height: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+h2 span{
+    color: #999;
+    font-size: 0.8em;
+}
+
+.arrow{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #999;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow:hover span{
+    transform: scale(1.2);
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #999;
+    border-radius: 10px;
+    cursor: pointer ;
+    text-align: center;
+}
+
+.toggle span{
+    line-height: 40px;
+    color: #000;
+    transition: .3s ease, opacity 0s,
+    visibility 0s;
+}
+
+.toggle:hover span{
+    transform: scale(1.1);
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.toggle span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.toggle.active span:first-child {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.toggle.active span:first-child {
+    opacity: 1;
+    visibility: visible;
+}
