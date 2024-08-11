@@ -381,7 +381,7 @@ img{
     position: relative;
     padding-left: 20px;
     width: 100%;
-    height: 140%;
+    height: 100%;
     background: white;
     backdrop-filter: blur(5px); 
     border-radius: 20px;
@@ -578,4 +578,12 @@ img{
 
 .container .right main .projectCard.projectCard2{
     grid-row: 4 / 7;
+}
+
+.container .right main .projectCard.projectCard2 .projectProgress .process{
+    background: #dffde0;
+}
+
+.container .right main .projectCard.projectCard2 .projectProgress .process h2{
+    color: #69bc72;
 }
