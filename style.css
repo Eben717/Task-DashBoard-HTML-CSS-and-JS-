@@ -381,7 +381,7 @@ img{
     position: relative;
     padding-left: 20px;
     width: 100%;
-    height: 100%;
+    height: 140%;
     background: white;
     backdrop-filter: blur(5px); 
     border-radius: 20px;
@@ -467,4 +467,115 @@ img{
     white-space: nowrap;
     font-size: 0.9em;   
     font-weight: 400;
+}
+
+.container .right main .projectCard .groupImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container .right main .projectCard .groupImg::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(0, 0, 0, .1);
+}
+.container .right main .projectCard .groupImg a{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: var(--left);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right main .projectCard .groupImg a img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .right main .projectCard .groupImg a:last-child{
+    border: 3px solid #999;
+    background: #fff;
+}
+
+.container .right main .projectCard .groupImg a:last-child .number{
+    color: #999;
+    font-size: 1.2em;
+}
+
+.container .right main .projectCard .task{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.container .right main .projectCard .task h2{
+    color: #999;
+    font-size: 1em;
+}
+
+.container .right main .projectCard .task h2 bold{
+    color: black;
+}
+
+.container .right main .projectCard .task .line{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container .right main .projectCard .task .line::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: calc(100% - 25%);
+    height: 100%;
+    background: #6577ff;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.container .right main .projectCard .due{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .projectCard .due h2{
+    padding: 0px 10px;
+    border: 2px solid #f5b5f5;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #f5b5f5;
+}
+
+.container .right main .projectCard.projectCard2{
+    grid-row: 4 / 7;
 }
