@@ -52,7 +52,7 @@ body{
     overflow: hidden;
 
 }
-
+/* styling container on the left*/
 .container .left {
     position: relative;
     width: 250px;
@@ -204,6 +204,7 @@ body{
     font-weight: 900;
     cursor: pointer;
 }
+/*styling container elements on the right*/
 .container .right{
     position: relative;
     width: 100%;
@@ -376,7 +377,7 @@ img{
     grid-template-rows: repeat(6, 1fr);
     gap: 20px;
 }
-
+/*This is the styling for the project card*/
 .container .right main .projectCard{
     position: relative;
     padding-left: 20px;
@@ -490,11 +491,11 @@ img{
 }
 .container .right main .projectCard .groupImg a{
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     overflow: hidden;
     border-radius: 50%;
-    left: var(--left);
+    left: 8em;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -509,13 +510,13 @@ img{
 }
 
 .container .right main .projectCard .groupImg a:last-child{
-    border: 3px solid #999;
+    border: 2px solid #999;
     background: #fff;
 }
 
 .container .right main .projectCard .groupImg a:last-child .number{
     color: #999;
-    font-size: 1.2em;
+    font-size: 0.7em;
 }
 
 .container .right main .projectCard .task{
@@ -525,7 +526,7 @@ img{
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .container .right main .projectCard .task h2{
@@ -541,7 +542,7 @@ img{
     position: relative;
     width: 100%;
     height: 5px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(113, 98, 98, 0.1);
     border-radius: 10px;
     z-index: -1;
     overflow: hidden;
@@ -575,7 +576,7 @@ img{
     font-size: 1.1em;
     color: #f5b5f5;
 }
-
+/*styling projectCard2*/
 .container .right main .projectCard.projectCard2{
     grid-row: 4 / 7;
 }
@@ -599,14 +600,16 @@ img{
 }
 
 .container .right main .projectCard.projectCard2 .task .line::before{
-    background: #f5c75f;
+    background: #f5c75f;    
 }
 
+
+/* Below is the styling for the tasks */
 .container .right main .myTasks{
     position: relative;
-    padding-left: 20px;
-    width: 70%;
-    height: 120%;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
     background: white;
     backdrop-filter: blur(5px); 
     border-radius: 20px;
@@ -623,12 +626,23 @@ img{
 
 .container .right main .myTasks .tasksHead{
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding-bottom: 50px;
+}
+
+.container .right main .myTasks .tasksHead .tasksDots{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasksHead .tasksDots span{
+    color: #000;
+    font-size: 1.8em;
+    font-weight: 400;
 }
 
 .container .right main .myTasks .tasksHead h2{
@@ -658,7 +672,7 @@ img{
     width: 100%;
     height: calc(100% / 7);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center ;
 }
 
@@ -676,13 +690,15 @@ img{
     width: 0;
 }
 
-.container .right main .myTasks .tasks ul li .taskIconName{
+.container .right main .myTasks .tasks ul li .tasksIconName{
     position: relative;
     width: 100%;
     height: 100%;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 20px;
 }
 
 .container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon{
@@ -690,9 +706,106 @@ img{
     width: 25px;
     height: 25px;
     border-radius: 40%;
+    cursor: pointer;
 }
-/*
+
 .container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon.done{
     color:  #fff;
     background: #69bc72;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon.notDone{
+    background: #fff;
+    border: 3px solid #999;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksName{
+    position: relative;
+    color: #000;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksName.tasksLine{
+    color: #999;
+    cursor: not-allowed;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksName.tasksLine::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #999;
+}
+
+.container .right main .myTasks .tasks ul li .tasksStar.full,
+.container .right main .myTasks .tasks ul li .tasksStar.half{
+    color: #f5c75f;
+}
+
+.container .right main .timelines{
+    position: relative;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    backdrop-filter: blur(5px); 
+    border-radius: 20px;
+    box-shadow: 35px 35px 68px 0px rgba(255, 255, 255, .5),
+    inset -8px -8px 16px 0px rgba(255, 255, 255, .6),
+    inset 0px 11px 28px 0px rgba(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 5 / 7;
+    grid-column: 2 / 3;
+    overflow: hidden;
+}
+
+.container .right main .timelines .timelineHead{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .right main .timelines .timelineHead h2{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    line-height: 18px;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.container .right main .timelines .timelineHead .timelineDots{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right main .timelines .timelineHead .timelineDots span{
+    color: #000;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+.container .right main .timelines .timelineVideos{
+    position: relative;
+    width: calc(100% + 40px);
+    height: 100%;
+}
+
+.container .right main .timelines .timelineVideos ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
