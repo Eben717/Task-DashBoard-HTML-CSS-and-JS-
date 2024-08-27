@@ -978,3 +978,18 @@ img{
     cursor: pointer;
     transition: .3s ease;
 }
+
+.container .right main .calendar .calendarData .days li.inactive{
+    color: #999;
+}
+
+.container .right main .calendar .calendarData .days li.active{
+    background:#6577ff;
+    color: #fff;
+}
+
+.container .right main .calendar .calendarData .days li:hover{
+    background: #999;
+    color: #fff;
+    transition: 0s;
+}
