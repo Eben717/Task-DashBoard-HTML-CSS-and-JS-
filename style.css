@@ -1069,3 +1069,15 @@ img{
     color: #999;
     font-size: 0.7em;
 }
+
+/* Responsive */
+@media (max-width: 1176px){
+    .container .left{
+        position: absolute;
+        left: -300px;
+        height: calc(100% - 5vh);
+        z-index: 11;
+        box-shadow: none;
+        transition: .5s ease;
+    }
+}
