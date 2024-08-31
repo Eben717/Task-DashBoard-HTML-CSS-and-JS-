@@ -1080,4 +1080,73 @@ img{
         box-shadow: none;
         transition: .5s ease;
     }
+    .container .left.active{
+        left: 20px;
+    }
+    .container .right.overlay::before{
+        content: '';
+        position: absolute;
+        background: black;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        border-radius: 20px;
+    }
+    .container .right .top .user .toggle{
+        display: block;
+    }
+}
+
+@media (max-width: 927px){
+    .container{
+        height: 100%;
+        margin: 30px 0;
+    }
+    .container .left.active{
+        width: calc(100% - 40px);
+        height: calc(100vh - 55px);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .container .left header .logo .close{
+        display: block;
+    }
+    .container .right main{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1.4fr 1.4fr 1.6fr 1.3fr 1fr 1.3fr;
+    }
+    .container .right main *{
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    .container .right .top .searchBx h2{
+        font-size: 1.2em;
+    }
+    .container .right .top .searchBx .inputBx{
+        width: 45px;
+        cursor: pointer;
+    }
+    .container .right .top .searchBx.active{
+        position: absolute;
+        width: calc(100% - 40px);
+        height: 45px;
+        background: white;
+        z-index: 10;
+        border-radius: 10px;
+    }
+    .container .right .top .searchBx.active h2{
+        display: none;
+    }
+    .container .right .top .searchBx.active .inputBx{
+        width: 100%;
+    }
+    .container .right .top .searchBx.active .inputBx input{
+        padding-right: 40px;
+    }
+    .container .right .top .searchBx.active .inputBx span{
+        display: block;
+    }
+    .container .right .top .user{
+        gap: 10px;
+    }
 }
